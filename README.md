@@ -1,8 +1,17 @@
 # Awesome Browser Game Ports [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of **real games that run directly inside your browser** using WebAssembly, Emscripten, DOSBox, js-dos, WebGL, source ports, and emulation.
->
-> **This list is *not* for cloud gaming or game streaming services.** Every game or collection listed here executes locally in your browser.
+> A curated list of **real games that run directly inside your browser** — powered by WebAssembly, Emscripten, DOSBox, [js-dos](https://js-dos.com/), WebGL, source ports, and emulation. No installs, no plugins.
+
+Everything here runs in a modern browser. Some projects are freeware or fully open source and play instantly; others are open-source *engines* that need you to supply your own legally obtained game files.
+
+**Legend**
+
+| Icon | Meaning |
+|:----:|---------|
+| 🎮 | Plays instantly (freeware / open assets included) |
+| 🔑 | Requires your own original game files/assets |
+| 🌐 | Multiplayer supported |
+| 📚 | Library / collection of many games |
 
 ---
 
@@ -13,6 +22,7 @@
 - [Adventure Games](#adventure-games)
 - [RPGs](#rpgs)
 - [RTS / Strategy](#rts--strategy)
+- [Action / Platformers](#action--platformers)
 - [DOS Game Libraries](#dos-game-libraries)
 - [Windows Game Libraries](#windows-game-libraries)
 - [Console & Arcade Libraries](#console--arcade-libraries)
@@ -20,404 +30,301 @@
 - [Source Ports](#source-ports)
 - [Open Source Games](#open-source-games)
 - [Game Engines](#game-engines)
-- [Flash Preservation](#flash-preservation)
-- [Java](#java)
+- [Flash & Java Preservation](#flash--java-preservation)
+- [Recommended Starting Points](#recommended-starting-points)
+- [Related Awesome Lists](#related-awesome-lists)
 - [Coming Soon](#coming-soon)
 - [Contributing](#contributing)
+- [License](#license)
+- [Disclaimer](#disclaimer)
 
 ---
 
-# Native Browser Ports
+## Native Browser Ports
 
-These are complete games that have been ported to run natively inside modern web browsers.
+Standalone ports you can click and play — no library or emulator front-end required.
 
-| Game | Description |
-|------|-------------|
-| [Half-Life 2](https://hl2.slqnt.dev/) | Fully playable Source Engine port running through WebAssembly. |
-| [WebXash (Half-Life / Counter-Strike)](https://x8bitrain.github.io/webXash/) | Xash3D browser port. Supports original GoldSrc assets. |
-| [QuakeJS](https://www.quakejs.com/) | Quake III Arena running entirely inside the browser. |
-| [Wolfenstein 3D](https://wolf3d.io/) | Classic Wolf3D playable online. |
-| [DiabloWeb](https://d07riv.github.io/diabloweb/) | Diablo running in browser using DevilutionX. |
-
----
-
-# FPS Games
-
-## Doom Family
-
-- Doom
-- Doom II
-- Ultimate Doom
-- Final Doom
-- Heretic
-- Hexen
-- Strife
-
-Useful Links
-
-- https://wadcmd.com/
-- https://github.com/lazarv/wasm-doom
+| Game | Notes | Assets |
+|------|-------|:------:|
+| [Half-Life 2](https://hl2.slqnt.dev/) | Source Engine port running through WebAssembly. | 🔑 |
+| [WebXash (Half-Life / Counter-Strike)](https://x8bitrain.github.io/webXash/) | Xash3D-based GoldSrc port; supports original assets. | 🔑 |
+| [Q3JS](https://q3js.com/) | Quake III Arena running entirely in the browser (WebAssembly, online servers). | 🎮🌐 |
+| [Wolfenstein 3D](https://dos.zone/wolfenstein-3d-may-05-1992/) | The classic Wolf3D, playable online via js-dos. | 🎮 |
+| [DiabloWeb](https://d07riv.github.io/diabloweb/) | Diablo in the browser via DevilutionX (needs `DIABDAT.MPQ`, shareware works). | 🔑 |
+| [Red Alert 2: Chrono Divide](https://chronodivide.com/) | Full browser recreation of C&C: Red Alert 2, cross-platform multiplayer. | 🎮🌐 |
+| [OpenLara](http://xproger.info/projects/OpenLara/) | WebGL engine for the original Tomb Raider — demo level included. | 🎮 |
+| [Silent Space Marine](https://silentspacemarine.com/) | Multiplayer Doom on Cloudflare Workers (Chocolate Doom + WebSockets). | 🎮🌐 |
 
 ---
 
-## Quake Family
+## FPS Games
 
-- Quake
-- Quake II
-- Quake III Arena
+### Doom Family
 
-Useful Links
+Runs Doom, Doom II, Ultimate Doom, Final Doom, Heretic, Hexen, and Strife.
 
-- https://www.quakejs.com/
+| Project | Notes | Assets |
+|---------|-------|:------:|
+| [WadCMD](https://wadcmd.com/) | Upload and play any `.wad` in the browser (PWA, installable). | 🔑 |
+| [wasm-doom](https://github.com/lazarv/wasm-doom) | Chocolate/Crispy Doom compiled to WebAssembly. | 🔑 |
+| [Dwasm](https://github.com/GMH-Code/Dwasm) | PrBoom+ / PrBoomX engine in the browser. | 🔑 |
+| [Cloudflare doom-wasm](https://github.com/cloudflare/doom-wasm) | Chocolate Doom WASM port with WebSockets multiplayer. | 🔑🌐 |
+| [Freedoom](https://freedoom.github.io/) | Free game data — pair it with any of the ports above to play instantly. | 🎮 |
 
----
+### Quake Family
 
-## Build Engine Games
+Quake, Quake II, and Quake III Arena.
 
-Community browser ports exist for:
+- [Q3JS](https://q3js.com/) — Quake III Arena, multiplayer in-browser (WebAssembly) 🎮🌐
+- [NetQuake.io](https://www.netquake.io/) — the original Quake in your browser 🎮🌐
+- [ioquake3](https://ioquake3.org/) — the source port these are built on 🔑
 
-- Duke Nukem 3D
-- Blood
-- Shadow Warrior
-- Redneck Rampage
+### Build Engine Games
 
----
+Ken Silverman's Build engine shooters, playable in-browser via js-dos.
 
-## GoldSrc
+| Game | Link | Assets |
+|------|------|:------:|
+| Duke Nukem 3D | [dos.zone](https://dos.zone/duke-nukem-3d-1996/) | 🎮 |
+| Blood | [dos.zone](https://dos.zone/blood-may-31-1997/) | 🎮 |
+| Shadow Warrior | [dos.zone](https://dos.zone/shadow-warrior/) | 🎮 |
+| Redneck Rampage | [dos.zone](https://dos.zone/redneck-rampage-1997/) | 🎮 |
 
-- Half-Life
-- Counter-Strike
-- Team Fortress Classic
-- Opposing Force
+> Prefer a modern source port? [EDuke32](https://www.eduke32.com/) also has WebAssembly builds (bring your own game files 🔑).
 
-Useful Link
+### GoldSrc
 
-- https://x8bitrain.github.io/webXash/
+Half-Life, Counter-Strike, Team Fortress Classic, and Opposing Force.
 
----
+- [WebXash](https://x8bitrain.github.io/webXash/) — Xash3D-FWGS in the browser 🔑
+- [Xash3D-FWGS](https://github.com/FWGS/xash3d-fwgs) — the engine behind it 🔑
 
-# Adventure Games
+### Marathon
 
-## ScummVM
-
-Supports classics such as:
-
-- Monkey Island
-- Day of the Tentacle
-- Sam & Max Hit the Road
-- Full Throttle
-- Broken Sword
-- Simon the Sorcerer
-- Indiana Jones
-
-Website:
-
-https://www.scummvm.org/
+- [AlephWeb](https://github.com/TotallyGatsby/AlephWeb) — WebGL port of Aleph One (Marathon 2 / Infinity) 🎮
+- [Aleph One](https://alephone.lhowon.org/) — the open-source Marathon engine (free trilogy data) 🎮
 
 ---
 
-# RPGs
+## Adventure Games
 
-| Game | Notes |
-|------|-------|
-| Diablo | Browser port using DevilutionX |
-| Ultima Series | Available through DOS collections |
-| Prince of Persia | DOS browser versions available |
-| Morrowind | Experimental OpenMW browser builds |
+Point-and-click classics — mostly LucasArts/Sierra titles running via js-dos or ScummVM in the browser.
 
----
+| Game | Link | Assets |
+|------|------|:------:|
+| The Secret of Monkey Island | [dos.zone](https://dos.zone/the-secret-of-monkey-island/) | 🎮 |
+| Day of the Tentacle | [ClassicReload](https://classicreload.com/day-of-the-tentacle.html) | 🎮 |
+| Broken Sword: Shadow of the Templars | [PlayClassic](https://playclassic.games/games/point-n-click-adventure-dos-games-online/play-broken-sword-the-shadow-of-the-templars-online/) | 🎮 |
+| Beneath a Steel Sky *(freeware)* | [ScummWEB](https://scummweb.tsilva.eu/) | 🎮 |
 
-# RTS / Strategy
+### Engines & Collections
 
-Community ports and collections.
-
-- Command & Conquer
-- Red Alert
-- Dune II
-- Warcraft II
-
-Projects
-
-- OpenRA
-- FreeCiv
+- [ScummWEB](https://scummweb.tsilva.eu/) — browser-first ScummVM collection, quick-play adventures 🎮
+- [ScummVM](https://www.scummvm.org/) — the engine behind them; runs Monkey Island, Sam & Max, Full Throttle, Simon the Sorcerer, Indiana Jones, and hundreds more 🔑
+- [ScummVM freeware games](https://www.scummvm.org/games/) — legally free titles you can play immediately 🎮
 
 ---
 
-# DOS Game Libraries
+## RPGs
 
-These are among the largest collections of DOS games playable in-browser.
-
-## Internet Archive
-
-https://archive.org/details/softwarelibrary_msdos_games
-
-Thousands of preserved DOS games.
-
----
-
-## DOS Zone
-
-https://dos.zone/
-
-Large collection powered by js-dos.
+| Game | Notes | Link | Assets |
+|------|-------|------|:------:|
+| Diablo | Browser port using DevilutionX | [DiabloWeb](https://d07riv.github.io/diabloweb/) | 🔑 |
+| Ultima Underworld: The Stygian Abyss | Landmark first-person RPG, in-browser via js-dos | [dos.zone](https://dos.zone/ultima-underworld-the-stygian-abyss-1992/) | 🎮 |
+| Prince of Persia | DOS version in-browser via js-dos | [dos.zone](https://dos.zone/prince-of-persia-1990/) | 🎮 |
+| Betrayal at Krondor | Classic RPG, playable online | [PlayClassic](https://playclassic.games/games/role-playing-dos-games-online/) | 🎮 |
+| Morrowind | Experimental OpenMW WebAssembly builds | [OpenMW](https://openmw.org/) | 🔑 |
 
 ---
 
-## ClassicReload
+## RTS / Strategy
 
-https://classicreload.com/
-
-DOS and Windows classics.
-
----
-
-## PlayClassic.games
-
-https://playclassic.games/
-
-DOS game archive.
+| Game / Project | Notes | Link | Assets |
+|----------------|-------|------|:------:|
+| Red Alert 2 | Full browser recreation, multiplayer | [Chrono Divide](https://chronodivide.com/) | 🎮🌐 |
+| C&C / Red Alert / Dune 2000 | Open-source engine reimplementation | [OpenRA](https://www.openra.net/) | 🎮🌐 |
+| Freeciv (Civilization-like) | HTML5 / WebGL, play online | [play.freeciv.org](http://play.freeciv.org/) | 🎮🌐 |
+| Dune II: The Building of a Dynasty | The RTS that started the genre (OpenDUNE build) | [dos.zone](https://dos.zone/dune-ii-the-building-of-a-dynasty-dec-1992/) | 🎮 |
+| Warcraft II: Tides of Darkness | Classic RTS, in-browser via js-dos (multiplayer) | [dos.zone](https://dos.zone/warcraft-ii-tides-of-darkness/) | 🎮🌐 |
+| Transport Tycoon | Open-source remake OpenTTD | [OpenTTD](https://openttd.org/) | 🎮 |
 
 ---
 
-## js-dos
+## Action / Platformers
 
-https://js-dos.com/games/
-
-DOSBox running through JavaScript/WebAssembly.
-
----
-
-# Windows Game Libraries
-
-## v86
-
-https://copy.sh/v86/
-
-Emulates complete x86 PCs including:
-
-- DOS
-- Windows 95
-- Windows 98
-- Linux
-- BSD
+| Game | Notes | Link | Assets |
+|------|-------|------|:------:|
+| Tomb Raider | WebGL engine, demo level included | [OpenLara](http://xproger.info/projects/OpenLara/) | 🎮 |
+| Prince of Persia | Original DOS game in-browser | [dos.zone](https://dos.zone/prince-of-persia-1990/) | 🎮 |
+| SuperTuxKart | Open-source kart racer, WebAssembly build | [SuperTuxKart](https://supertuxkart.net/) | 🎮 |
 
 ---
 
-## wemu
+## DOS Game Libraries 📚
 
-https://wemu.dev/
-
-Experimental Windows emulator.
-
----
-
-# Console & Arcade Libraries
-
-## EmulatorJS
-
-https://emulatorjs.org/
-
-Supports dozens of consoles including:
-
-- NES
-- SNES
-- Nintendo 64
-- Game Boy
-- GBA
-- Nintendo DS
-- Sega Genesis
-- PlayStation
-- PSP
-- Atari
-- Neo Geo
-- Arcade
+| Library | Notes |
+|---------|-------|
+| [Internet Archive — MS-DOS](https://archive.org/details/softwarelibrary_msdos_games) | Thousands of preserved, playable DOS games. |
+| [DOS Zone](https://dos.zone/) | Large curated collection powered by js-dos. |
+| [ClassicReload](https://classicreload.com/) | DOS and Windows classics in-browser. |
+| [PlayClassic.games](https://playclassic.games/) | Clean DOS game archive. |
+| [js-dos](https://js-dos.com/) | The DOSBox-in-WebAssembly engine that powers most of the above. |
 
 ---
 
-## RetroArch Web Player
+## Windows Game Libraries 📚
 
-https://web.libretro.com/
-
-Browser version of RetroArch.
-
----
-
-## WebRcade
-
-https://webrcade.com/
-
-Beautiful web frontend for browser emulation.
+| Project | Notes |
+|---------|-------|
+| [Emupedia / EmuOS](https://emupedia.net/) | Simulated Win 3.11–ME desktop preloaded with classic games and apps. |
+| [v86](https://copy.sh/v86/) | Emulates full x86 PCs — DOS, Windows 95/98, Linux, BSD, in the browser. |
+| [ClassicReload](https://classicreload.com/) | Windows and DOS classics. |
 
 ---
 
-# Emulators
+## Console & Arcade Libraries 📚
 
-## DOS
-
-- js-dos
-- DOSBox
-
-## PC
-
-- v86
-- wemu
-
-## Console
-
-- EmulatorJS
-- RetroArch Web
+| Project | Notes |
+|---------|-------|
+| [EmulatorJS](https://emulatorjs.org/) | NES, SNES, N64, Game Boy/GBA, DS, Genesis, PlayStation, PSP, Atari, Neo Geo, Arcade, and more. |
+| [RetroArch Web Player](https://web.libretro.com/) | Official browser build of RetroArch. |
+| [webretro](https://binbashbanana.github.io/webretro/) | Standalone RetroArch-in-browser front-end. |
+| [webЯcade](https://www.webrcade.com/) | Beautiful, app-store-style web front-end for emulation. |
 
 ---
 
-# Source Ports
+## Emulators
 
-Open-source engines compiled for browsers.
-
-| Engine | Purpose |
-|---------|---------|
-| Xash3D | GoldSrc games |
-| Chocolate Doom | Doom |
-| wasm-doom | Doom |
-| ioquake3 | Quake III |
-| OpenJK | Jedi Academy |
-| OpenMW | Morrowind |
+| Category | Projects |
+|----------|----------|
+| **DOS** | [js-dos](https://js-dos.com/) · [DOSBox](https://www.dosbox.com/) |
+| **PC / x86** | [v86](https://copy.sh/v86/) |
+| **Console / Arcade** | [EmulatorJS](https://emulatorjs.org/) · [RetroArch Web](https://web.libretro.com/) · [webretro](https://binbashbanana.github.io/webretro/) |
+| **Flash** | [Ruffle](https://ruffle.rs/) |
+| **Java** | [CheerpJ](https://cheerpj.com/) |
 
 ---
 
-# Open Source Games
+## Source Ports
 
-Games that have browser builds available.
+Open-source engines compiled for the browser (bring your own game data).
 
-- OpenTTD
-- OpenRA
-- FreeCiv
-- Minetest
-- Veloren
-- Endless Sky
-- Battle for Wesnoth
-- SuperTuxKart
+| Engine | Powers | Link |
+|--------|--------|------|
+| Xash3D-FWGS | GoldSrc (Half-Life, CS) | <https://github.com/FWGS/xash3d-fwgs> |
+| Chocolate Doom | Doom | <https://www.chocolate-doom.org/> |
+| wasm-doom | Doom | <https://github.com/lazarv/wasm-doom> |
+| ioquake3 | Quake III | <https://ioquake3.org/> |
+| DevilutionX | Diablo | <https://github.com/diasurgical/devilutionX> |
+| OpenJK | Jedi Outcast / Academy | <https://github.com/JACoders/OpenJK> |
+| OpenMW | Morrowind | <https://openmw.org/> |
+| Aleph One | Marathon | <https://alephone.lhowon.org/> |
+| OpenLara | Tomb Raider | <https://github.com/XProger/OpenLara> |
 
 ---
 
-# Game Engines
+## Open Source Games
 
-Useful if you want to compile games for the browser.
+Fully open-source games — several ship official or community WebAssembly/WebGL builds.
+
+| Game | Type | Link |
+|------|------|------|
+| OpenTTD | Transport sim | <https://openttd.org/> |
+| OpenRA | RTS (C&C engine) | <https://www.openra.net/> |
+| Freeciv-web | 4X strategy | <http://play.freeciv.org/> |
+| Luanti (Minetest) | Voxel sandbox | <https://www.luanti.org/> |
+| Veloren | Voxel action-RPG | <https://veloren.net/> |
+| Endless Sky | Space trading | <https://endless-sky.github.io/> |
+| Battle for Wesnoth | Turn-based strategy | <https://www.wesnoth.org/> |
+| SuperTuxKart | Kart racer | <https://supertuxkart.net/> |
+
+---
+
+## Game Engines
+
+Toolkits for shipping your own games to the browser.
 
 | Engine | Website |
-|---------|----------|
-| Emscripten | https://emscripten.org/ |
-| Godot | https://godotengine.org/ |
-| Unity WebGL | https://unity.com/ |
-| Unreal HTML5 Community | Community Maintained |
+|--------|---------|
+| Emscripten | <https://emscripten.org/> |
+| Godot (Web export) | <https://godotengine.org/> |
+| Unity (WebGL) | <https://unity.com/> |
+| Unreal (HTML5, community) | <https://github.com/UnrealEngineHTML5> |
+| PlayCanvas | <https://playcanvas.com/> |
 
 ---
 
-# Flash Preservation
+## Flash & Java Preservation
 
-## Ruffle
-
-https://ruffle.rs/
-
-Modern Flash emulator written in Rust.
-
----
-
-## Flashpoint Archive
-
-https://flashpointarchive.org/
-
-Largest Flash preservation project.
+| Project | Notes |
+|---------|-------|
+| [Ruffle](https://ruffle.rs/) | Modern Flash Player emulator written in Rust/WebAssembly. |
+| [Flashpoint Archive](https://flashpointarchive.org/) | The largest Flash & web-game preservation project. |
+| [CheerpJ](https://cheerpj.com/) | Run Java applets and applications directly in the browser. |
 
 ---
 
-# Java
+## Recommended Starting Points
 
-## CheerpJ
-
-https://cheerpj.com/
-
-Run Java applications directly in your browser.
-
----
-
-# Recommended Starting Points
-
-⭐ **Half-Life 2**
-https://hl2.slqnt.dev/
-
-⭐ **QuakeJS**
-https://www.quakejs.com/
-
-⭐ **DiabloWeb**
-https://d07riv.github.io/diabloweb/
-
-⭐ **WebXash**
-https://x8bitrain.github.io/webXash/
-
-⭐ **Internet Archive DOS Collection**
-https://archive.org/details/softwarelibrary_msdos_games
-
-⭐ **DOS Zone**
-https://dos.zone/
-
-⭐ **EmulatorJS**
-https://emulatorjs.org/
-
-⭐ **ScummVM**
-https://www.scummvm.org/
+| ⭐ | Project | Why |
+|:--:|---------|-----|
+| ⭐ | [Half-Life 2](https://hl2.slqnt.dev/) | A full AAA Source game in a browser tab. |
+| ⭐ | [Q3JS](https://q3js.com/) | Instant, free, multiplayer Quake III. |
+| ⭐ | [Chrono Divide](https://chronodivide.com/) | Red Alert 2 online, no download. |
+| ⭐ | [DiabloWeb](https://d07riv.github.io/diabloweb/) | Diablo (shareware data works). |
+| ⭐ | [Emupedia / EmuOS](https://emupedia.net/) | A whole retro OS full of games. |
+| ⭐ | [Internet Archive DOS](https://archive.org/details/softwarelibrary_msdos_games) | Thousands of one-click classics. |
+| ⭐ | [EmulatorJS](https://emulatorjs.org/) | Every console emulator in one place. |
+| ⭐ | [ScummVM](https://www.scummvm.org/) | The definitive point-and-click library. |
 
 ---
 
-# Coming Soon
+## Related Awesome Lists
 
-Planned additions:
+- [awesome-wasm](https://github.com/mbasso/awesome-wasm) — WebAssembly resources
+- [awesome-game-remakes](https://github.com/radek-sprta/awesome-game-remakes) — open-source game remakes
+- [awesome-gamedev](https://github.com/Kavex/GameDev-Resources) — general game-development resources
+
+---
+
+## Coming Soon
 
 - [ ] Browser MMOs
-- [ ] Browser Source Engine ports
-- [ ] Unreal Engine ports
+- [ ] More Source Engine ports
+- [ ] Unreal Engine web ports
 - [ ] Unity classics
 - [ ] Browser Linux distributions
 - [ ] Browser Windows software
-- [ ] Browser game development tools
+- [ ] Browser game-development tools
 - [ ] WebGPU projects
-- [ ] Multiplayer browser ports
-- [ ] Experimental ports
+- [ ] More multiplayer ports
+- [ ] Experimental / bleeding-edge ports
 
 ---
 
-# Contributing
+## Contributing
 
-Contributions are welcome!
+Contributions are welcome! Please open a Pull Request if you know of a browser port, open-source project, WebAssembly engine, emulator, preservation project, or classic game collection that belongs here.
 
-Please open a Pull Request if you know of:
+**Please include:**
 
-- New browser ports
-- Open-source projects
-- WebAssembly game engines
-- Browser emulators
-- Preservation projects
-- Classic game collections
-
----
-
-## Submission Guidelines
-
-Please include:
-
-- Project name
-- URL
-- Brief description
+- Project name and URL
+- A brief, factual description
 - License (if known)
-- Whether original game assets are required
+- Whether original game assets are required (use the 🎮 / 🔑 legend)
+
+Keep entries alphabetical within a section where it makes sense, and make sure links actually work before submitting.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the contributors have waived all copyright and related rights to this list. The underlying **MIT License** also applies to any repository code.
 
 ---
 
 ## Disclaimer
 
-This repository links only to publicly available projects. Ownership of the games, engines, trademarks, and copyrights belongs to their respective owners. Some projects require users to provide their own legally obtained game assets.
+This repository links only to publicly available projects. Ownership of the games, engines, trademarks, and copyrights belongs to their respective owners. Some projects require users to provide their own legally obtained game assets. No copyrighted game data is hosted here.
