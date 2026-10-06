@@ -53,7 +53,7 @@ Standalone ports you can click and play — no library or emulator front-end req
 | [DiabloWeb](https://d07riv.github.io/diabloweb/) | Diablo in the browser via DevilutionX (needs `DIABDAT.MPQ`, shareware works). | 🔑 |
 | [Red Alert 2: Chrono Divide](https://chronodivide.com/) | Full browser recreation of C&C: Red Alert 2, cross-platform multiplayer. | 🎮🌐 |
 | [OpenLara](http://xproger.info/projects/OpenLara/) | WebGL engine for the original Tomb Raider — demo level included. | 🎮 |
-| [Silent Space Marine](https://silentspacemarine.com/) | Multiplayer Doom on Cloudflare Workers (Chocolate Doom + WebSockets). | 🎮🌐 |
+| [Halo: Combat Evolved](https://mitchellhynes.com/halo/halo.html) | Full Xbox version via decompilation to WebAssembly. Campaign, split-screen co-op and up to 128 player multiplayer (bring your own XISO, validated locally). | 🔑🌐 |
 
 ---
 
@@ -103,6 +103,11 @@ Half-Life, Counter-Strike, Team Fortress Classic, and Opposing Force.
 
 - [AlephWeb](https://github.com/TotallyGatsby/AlephWeb) — WebGL port of Aleph One (Marathon 2 / Infinity) 🎮
 - [Aleph One](https://alephone.lhowon.org/) — the open-source Marathon engine (free trilogy data) 🎮
+
+### Halo
+
+- [Halo: Combat Evolved browser port](https://mitchellhynes.com/halo/halo.html) — full Xbox version via decompilation to WebAssembly, campaign plus split-screen co-op plus up to 128 player multiplayer 🔑🌐
+- [web-halo](https://github.com/ecumene/web-halo) — source for the browser build (bring your own Xbox XISO, validated locally) 🔑
 
 ---
 
@@ -219,6 +224,7 @@ Open-source engines compiled for the browser (bring your own game data).
 | OpenJK | Jedi Outcast / Academy | <https://github.com/JACoders/OpenJK> |
 | OpenMW | Morrowind | <https://openmw.org/> |
 | Aleph One | Marathon | <https://alephone.lhowon.org/> |
+| halo-ce-universal / web-halo | Halo: Combat Evolved (Xbox) | <https://github.com/ecumene/web-halo> |
 | OpenLara | Tomb Raider | <https://github.com/XProger/OpenLara> |
 
 ---
