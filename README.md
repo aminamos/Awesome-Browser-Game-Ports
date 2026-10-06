@@ -53,6 +53,7 @@ Standalone ports you can click and play — no library or emulator front-end req
 | [DiabloWeb](https://d07riv.github.io/diabloweb/) | Diablo in the browser via DevilutionX (needs `DIABDAT.MPQ`, shareware works). | 🔑 |
 | [Red Alert 2: Chrono Divide](https://chronodivide.com/) | Full browser recreation of C&C: Red Alert 2, cross-platform multiplayer. | 🎮🌐 |
 | [OpenLara](http://xproger.info/projects/OpenLara/) | WebGL engine for the original Tomb Raider — demo level included. | 🎮 |
+| [Silent Space Marine](https://silentspacemarine.com/) | Multiplayer Doom on Cloudflare Workers (Chocolate Doom + WebSockets). | 🎮🌐 |
 | [Halo: Combat Evolved](https://mitchellhynes.com/halo/halo.html) | Full Xbox version via decompilation to WebAssembly. Campaign, split-screen co-op and up to 128 player multiplayer (bring your own XISO, validated locally). | 🔑🌐 |
 
 ---
