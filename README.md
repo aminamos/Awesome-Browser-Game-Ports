@@ -55,6 +55,7 @@ Standalone ports you can click and play — no library or emulator front-end req
 | [OpenLara](http://xproger.info/projects/OpenLara/) | WebGL engine for the original Tomb Raider — demo level included. | 🎮 |
 | [Silent Space Marine](https://silentspacemarine.com/) | Multiplayer Doom on Cloudflare Workers (Chocolate Doom + WebSockets). | 🎮🌐 |
 | [Halo: Combat Evolved](https://mitchellhynes.com/halo/halo.html) | Full Xbox version via decompilation to WebAssembly. Campaign, split-screen co-op and up to 128 player multiplayer (bring your own XISO, validated locally). | 🔑🌐 |
+| [GTA: Vice City (reVCDOS)](https://dos.zone/revcdos) | reVC decompilation to WebAssembly, playable instantly via DOS Zone. BYO-copy build at [revc.wasm.ltd](https://revc.wasm.ltd). | 🎮 |
 
 ---
 
@@ -163,6 +164,7 @@ Point-and-click classics — mostly LucasArts/Sierra titles running via js-dos o
 | Tomb Raider | WebGL engine, demo level included | [OpenLara](http://xproger.info/projects/OpenLara/) | 🎮 |
 | Prince of Persia | Original DOS game in-browser | [dos.zone](https://dos.zone/prince-of-persia-1990/) | 🎮 |
 | SuperTuxKart | Open-source kart racer, WebAssembly build | [SuperTuxKart](https://supertuxkart.net/) | 🎮 |
+| GTA: Vice City | Full open-world game via reVC decompilation to WebAssembly | [dos.zone](https://dos.zone/revcdos) | 🎮 |
 
 ---
 
@@ -226,6 +228,7 @@ Open-source engines compiled for the browser (bring your own game data).
 | OpenMW | Morrowind | <https://openmw.org/> |
 | Aleph One | Marathon | <https://alephone.lhowon.org/> |
 | halo-ce-universal / web-halo | Halo: Combat Evolved (Xbox) | <https://github.com/ecumene/web-halo> |
+| reVC / wasm-revc | GTA: Vice City | <https://github.com/origami-ltd/wasm-revc> |
 | OpenLara | Tomb Raider | <https://github.com/XProger/OpenLara> |
 
 ---
