@@ -110,6 +110,7 @@ Half-Life, Counter-Strike, Team Fortress Classic, and Opposing Force.
 
 - [Halo: Combat Evolved browser port](https://mitchellhynes.com/halo/halo.html) — full Xbox version via decompilation to WebAssembly, campaign plus split-screen co-op plus up to 128 player multiplayer 🔑🌐
 - [web-halo](https://github.com/ecumene/web-halo) — source for the browser build (bring your own Xbox XISO, validated locally) 🔑
+- [Halo CE Mobile](http://www.hcemobile.com) — Halo CE decomp running on Apple/Android browsers, matchmaking plus friends list plus custom games browser plus online campaign co-op 🔑🌐
 
 ---
 
@@ -165,6 +166,7 @@ Point-and-click classics — mostly LucasArts/Sierra titles running via js-dos o
 | Prince of Persia | Original DOS game in-browser | [dos.zone](https://dos.zone/prince-of-persia-1990/) | 🎮 |
 | SuperTuxKart | Open-source kart racer, WebAssembly build | [SuperTuxKart](https://supertuxkart.net/) | 🎮 |
 | GTA: Vice City | Full open-world game via reVC decompilation to WebAssembly | [dos.zone](https://dos.zone/revcdos) | 🎮 |
+| Super Mario 64 (12-player) | Entire game multiplayer in the browser, every level plus original missions together, live video chat | [olivers.tools](https://olivers.tools/play) | 🌐 |
 
 ---
 
